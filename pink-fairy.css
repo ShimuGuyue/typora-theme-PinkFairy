@@ -106,3 +106,17 @@ hr {
     height: 3px;            /* 分割线高度 */
     margin: 25px, 0;        /* 分割线外边距 */
 }
+
+/*
+  *=============================
+  *基础排版样式
+  *=============================
+*/
+#write {
+    max-width: 1000px;          /* 最大宽度 */
+    font-size: 1.15rem;         /* 正文字号 */
+    line-height: 1.6;           /* 行高 */
+    overflow-wrap: break-word;  /* 自动换行 */
+    font-family: "微软雅黑";    /* 默认字体 */
+    margin-bottom: 60rem;       /* 底部空白 */
+}
