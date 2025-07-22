@@ -177,3 +177,17 @@ li.md-list-item {
 #write ol {
   margin-left: -20px;             /* 列表左移 */
 }
+
+/** 引用块文本样式 */
+#write blockquote {
+    display: block;
+    font-size: 0.9em;
+    overflow: visible;
+    border-left: 10px solid var(--color-pink-light); /* 引用块左侧条框 */
+    padding: 15px 30px 15px 20px;                   /* 引用块内边距 */
+    margin-bottom: 20px;                            /* 引用块底部外边距 */
+    margin-top: 20px;                               /* 引用块顶部外边距 */
+    background-color: #e3c7e983;                  /* 引用块背景 */
+    color: var(--color-pink-heavy);                  /* 引用块文本颜色 */
+    border-radius: 8px;                             /* 引用块圆角 */
+}
