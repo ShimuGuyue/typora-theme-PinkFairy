@@ -89,3 +89,20 @@
 #write h6 {
     font-size: 1.2rem;   /* 六级标题字号 */
 }
+
+/*
+  *=============================
+  * 分割线样式
+  *=============================
+*/
+
+hr {
+    background-image: repeating-linear-gradient( 
+        -45deg,
+        var(--color-pink-heavy),
+        var(--color-pink-heavy) 4px,
+        transparent 4px,
+        transparent 8px);   /* 斜向粉红条纹 */
+    height: 3px;            /* 分割线高度 */
+    margin: 25px, 0;        /* 分割线外边距 */
+}
