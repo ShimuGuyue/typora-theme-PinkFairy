@@ -147,3 +147,9 @@ hr {
   text-decoration: underline solid;   /* 链接文本下划线 */
   margin: 2px;                        /* 链接文本侧边距 */
 }
+
+/** 高亮文本样式 */
+mark {
+  background: var(--color-pink-light);    /* 高亮背景色 */
+  padding: 1px 0.15rem;                   /* 高亮内边距 */
+}
