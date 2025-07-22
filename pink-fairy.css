@@ -9,3 +9,83 @@
  *  Fugu 主题 - https://github.com/sinlatansen/typora-theme-Fugu
  *
 **/
+
+/*
+  *=============================
+  * 主题全局变量
+  *=============================
+*/
+
+:root {
+    --color-pink-heavy: #ff33ff;
+    /* 粉色重色调 */
+}
+
+/*
+  *=============================
+  * 标题样式
+  *=============================
+*/
+
+/** 标题字体和颜色 */
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+    font-family: "微软雅黑";            /* 标题字体 */
+    margin: 0.8em 0 0.8em;              /* 标题外边距 */
+    color: var(--color-pink-heavy);     /* 标题颜色 */
+}
+
+/** 标题标识符 */
+#write h1 {
+    border-bottom: 3px solid var(--color-pink-heavy);       /* 一级标题下划线 */
+}
+#write h1::before {
+    content: "# ";       /* 一级标题前缀 */
+}
+#write h2::before {
+    content: "┃ ";      /* 二级标题前缀 */
+}
+#write h3::before {
+    content: "『 ";      /* 三级标题前缀 */
+    margin-left: -8px;   /* 三级标题左移 */
+}
+#write h3::after {
+    content: " 』";      /* 三级标题后缀 */
+}
+#write h4::before {
+    content: " ♪ ";      /* 四级标题前缀 */
+}
+#write h4::after {
+    content: " ♪";       /* 四级标题后缀 */
+}
+#write h5::before {
+    content: " ※ ";     /* 五级标题前缀 */
+    margin-left: -2px;   /* 五级标题左移 */
+}
+#write h6::before {
+    content: " ◬ ";     /* 六级标题前缀 */
+}
+
+/** 标题字号 */
+#write h1 {
+    font-size: 2.5rem;   /* 一级标题字号 */
+}
+#write h2 {
+    font-size: 2.0rem;   /* 二级标题字号 */
+}
+#write h3 {
+    font-size: 1.8rem;   /* 三级标题字号 */
+}
+#write h4 {
+    font-size: 1.55rem;  /* 四级标题字号 */
+}
+#write h5 {
+    font-size: 1.35rem;  /* 五级标题字号 */
+}
+#write h6 {
+    font-size: 1.2rem;   /* 六级标题字号 */
+}
