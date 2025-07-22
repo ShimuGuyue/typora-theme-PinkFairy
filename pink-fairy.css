@@ -136,3 +136,14 @@ hr {
 #write strong {
   color: var(--color-pink-heavy); /* 加粗文本颜色 */
 }
+
+/** 链接文本样式 */
+#write a {
+  color: var(--color-pink-heavy); /* 链接文本颜色 */
+}
+#write .md-p a,
+#write .md-heading a {
+  word-wrap: break-word;              /* 链接自动换行 */
+  text-decoration: underline solid;   /* 链接文本下划线 */
+  margin: 2px;                        /* 链接文本侧边距 */
+}
