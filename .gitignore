@@ -1,0 +1,7 @@
+
+.vscode/
+*.code-workspace
+
+typora-theme-Fugu-main/
+
+test/
