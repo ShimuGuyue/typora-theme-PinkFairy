@@ -131,3 +131,8 @@ hr {
 #write em {
   padding: 0 0.3rem 0 0;   /* 斜体文本内边距 */
 }
+
+/** 加粗文本样式 */
+#write strong {
+  color: var(--color-pink-heavy); /* 加粗文本颜色 */
+}
