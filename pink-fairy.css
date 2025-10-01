@@ -17,8 +17,12 @@
 */
 
 :root {
-    --color-pink-heavy: #ff33ff;
-    /* 粉色重色调 */
+  --color-pink-soft:  #FF9EC8;        /* 柔粉 */
+  --color-pink-hot:   #FF77CC;        /* 艳粉 */
+  --color-pink-light: #ffaaff;        /* 浅粉 */
+
+  --color-pink-heavy: #ff33ff;        /* 粉色重色调 */
+  --color-pink-light: #ffaaff;        /* 粉色浅色调 */
 }
 
 /*
@@ -36,38 +40,45 @@
 #write h6 {
     font-family: "微软雅黑";            /* 标题字体 */
     margin: 0.8em 0 0.8em;              /* 标题外边距 */
-    color: var(--color-pink-heavy);     /* 标题颜色 */
+    color: var(--color-pink-soft);      /* 标题颜色 */
 }
 
 /** 标题标识符 */
-#write h1 {
-    border-bottom: 3px solid var(--color-pink-heavy);       /* 一级标题下划线 */
-}
 #write h1::before {
-    content: "# ";       /* 一级标题前缀 */
+  content: "❀ ";       /* 一级标题前缀 */
+}
+#write h1::after {
+  content: " ❀";       /* 一级标题后缀 */
 }
 #write h2::before {
-    content: "┃ ";      /* 二级标题前缀 */
+  content: "➳ ";       /* 二级标题前缀 */
+}
+#write h2::after {
+  content: " ➳";       /* 二级标题后缀 */
 }
 #write h3::before {
-    content: "『 ";      /* 三级标题前缀 */
-    margin-left: -8px;   /* 三级标题左移 */
+  content: "☙ ";       /* 三级标题前缀 */
 }
 #write h3::after {
-    content: " 』";      /* 三级标题后缀 */
+  content: " ☙";       /* 三级标题后缀 */
 }
 #write h4::before {
-    content: " ♪ ";      /* 四级标题前缀 */
+  content: " ♥ ";      /* 一级标题前缀 */
 }
 #write h4::after {
-    content: " ♪";       /* 四级标题后缀 */
+  content: " ♥";       /* 一级标题前缀 */
 }
 #write h5::before {
-    content: " ※ ";     /* 五级标题前缀 */
-    margin-left: -2px;   /* 五级标题左移 */
+  content: " ♪ ";      /* 二级标题前缀 */
+}
+#write h5::after {
+  content: " ♪";       /* 三级标题后缀 */
 }
 #write h6::before {
-    content: " ◬ ";     /* 六级标题前缀 */
+  content: "❖ ";      /* 六级标题前缀 */
+}
+#write h6::after {
+  content: " ❖";      /* 六级标题前缀 */
 }
 
 /** 标题字号 */
