@@ -262,3 +262,20 @@ mark {
   border-radius: 8px;                               /* 引用块圆角 */
 }
 
+/*
+  *=============================
+  * 代码块样式
+  *=============================
+*/
+
+/** 行内代码样式 */
+#write code {
+  color: var(--color-pink-peach);                 /* 代码文字颜色 */
+  font-size: 1.2rem;                              /* 字体大小 */
+  word-wrap: break-word;                          /* 换行时长单词在任意字符间断行 */
+  margin: 1px;                                    /* 外边距 */
+  background-color: var(--color-pink-bright);     /* 背景颜色 */
+  font-family: "新宋体";                          /* 字体 */
+  word-break: break-all;                          /* 允许在任意字符间断词，防止溢出 */
+}
+
