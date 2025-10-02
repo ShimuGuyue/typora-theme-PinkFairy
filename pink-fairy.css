@@ -17,12 +17,11 @@
 */
 
 :root {
-  --color-pink-soft:  #FF9EC8;        /* 柔粉 */
-  --color-pink-hot:   #FF77CC;        /* 艳粉 */
-  --color-pink-light: #ffaaff;        /* 浅粉 */
-
-  --color-pink-heavy: #ff33ff;        /* 粉色重色调 */
-  --color-pink-light: #ffaaff;        /* 粉色浅色调 */
+  --color-pink-soft:         #FF9EC8;       /* 柔粉 */
+  --color-pink-hot:          #FF77CC;       /* 艳粉 */
+  --color-pink-light:        #ffaaff;       /* 浅粉 */
+  --color-pink-bright:       #FFEEF8;       /* 亮粉 */
+  --color-purple-herrscher : #6D6AA7;       /* 侵蚀紫 */
 }
 
 /*
@@ -121,37 +120,38 @@ hr {
 
 /*
   *=============================
-  *基础排版样式
+  *文本排版样式
   *=============================
 */
+
+/** 常规文本样式 */
 #write {
-    max-width: 1000px;          /* 最大宽度 */
-    font-size: 1.15rem;         /* 正文字号 */
-    line-height: 1.6;           /* 行高 */
-    overflow-wrap: break-word;  /* 自动换行 */
-    font-family: "微软雅黑";    /* 默认字体 */
-    margin-bottom: 60rem;       /* 底部空白 */
+  max-width: 1000px;          /* 最大宽度 */
+  overflow-wrap: break-word;  /* 自动换行 */
+  margin-bottom: 60rem;       /* 底部空白 */
+  font-size: 1.20rem;         /* 字号 */
+  line-height: 1.6;           /* 行高 */
+  font-family: "新宋体";      /* 字体 */
+  font-weight: bold           /* 加粗 */
 }
 
-/*
-  *=============================
-  *特殊格式文本样式
-  *=============================
-*/
-
 /** 斜体文本样式 */
-#write em {
-  padding: 0 0.3rem 0 0;   /* 斜体文本内边距 */
+#write em
+{
+  font-family: "Consolas", "华文行楷";   /* 斜体字体 */
+  font-size: 1.3rem;         /* 字号 */
+  margin-right: 0.3em;   /* 与右侧文本拉开距离 */
 }
 
 /** 加粗文本样式 */
 #write strong {
-  color: var(--color-pink-heavy); /* 加粗文本颜色 */
+  font-size: 1.3rem;            /* 字号增大 */
+  color: var(--color-pink-hot); /* 粗体颜色 */
 }
 
 /** 链接文本样式 */
 #write a {
-  color: var(--color-pink-heavy); /* 链接文本颜色 */
+  color: var(--color-pink-light); /* 链接文本颜色 */
 }
 #write .md-p a,
 #write .md-heading a {
@@ -162,44 +162,102 @@ hr {
 
 /** 高亮文本样式 */
 mark {
-  background: var(--color-pink-light);    /* 高亮背景色 */
+  background: var(--color-pink-bright);   /* 高亮背景颜色 */
   padding: 1px 0.15rem;                   /* 高亮内边距 */
+  color: var(--color-pink-hot);           /* 高亮字体颜色 */
+}
+
+/** 删除文本样式 */
+#write del, 
+#write s {
+  background-color: var(--color-purple-herrscher);  /* 删除元素背景颜色 */
+  color: var(--color-purple-herrscher);             /* 文本颜色与背景颜色相同，用于隐藏文本 */
+  border: 1px solid var(--color-purple-herrscher);  /* 边框 */
+  padding: 0.1em 0.3em;                             /* 内边距：上下0.1em，左右0.3em */
+  border-radius: 3px;                               /* 圆角 */
+  text-decoration: none;                            /* 移除删除线 */
+  transition: all 0.2s ease;                        /* 属性变化过渡时间 */
+}
+/* 鼠标悬停状态 */
+#write del:hover, 
+#write s:hover {
+  background-color: var(--color-pink-bright);   /* 悬停背景颜色 */
+  color: var(--color-pink-soft);                /* 悬停文本颜色 */
+  border: 1px dashed var(--color-pink-soft);    /* 粉色虚线边框 */
 }
 
 /** 列表样式 */
-#write li::marker{ 
-  color: var(--color-pink-light);  /* 列表符号颜色 */
-}
-#write ul {
-  list-style-type: disc;          /* 无序列表符号 */
-}
-#write ul ul {
-  list-style-type: square;        /* 嵌套无序列表符号 */
-}
-#write ol {
-  list-style-type: decimal;       /* 有序列表符号 */
-}
-#write ol ol {
-  list-style-type: lower-roman;   /* 嵌套有序列表符号 */
-}
-li.md-list-item {
-  margin: 0.5rem 0;               /* 列表外边距 */
-}
 #write ul,
 #write ol {
-  margin-left: -20px;             /* 列表左移 */
+  padding-left: 2em;    /* 缩进距离 */
+}
+/* 无序列表 */
+#write ul {
+  list-style: none;     /* 移除默认符号 */
+  margin-left: -1.2em;  /* 整体左移 */
+}
+#write ul li {
+  position: relative;   /* 符号定位 */
+  padding-left: 1.2em;  /* 符号与文本距离 */
+}
+#write ul li::before {
+  content: "❀";                  /* 符号 */
+  position: absolute;             /* 符号定位 */
+  left: -0.5em;                   /* 父元素的左侧距离 */
+  color: var(--color-pink-soft);  /* 符号颜色 */
+}
+#write ul ul li::before {
+  content: "➳";                  /* 符号 */
+  position: absolute;             /* 符号定位 */
+  left: -0.5em;                   /* 父元素的左侧距离 */
+  color: var(--color-pink-soft);  /* 符号颜色 */
+}
+/* 有序列表 */
+#write ol {
+  list-style: none;                     /* 移除默认数字 */
+  counter-reset: ol-digit-counter;      /* 数字计数器 */
+}
+#write ol li {
+  position: relative;                   /* 符号定位 */
+  padding-left: -1.2em;                 /* 符号与文本距离 */
+  counter-increment: ol-digit-counter;  /* 递增数字计数器 */
+}
+#write ol li::before {
+  content: counter(ol-digit-counter) "."; /* 显示计数器数字 */
+  position: absolute;                     /* 符号定位 */
+  left: -3em;                             /* 父元素的左侧距离 */
+  width: 2.5em;                           /* 序号宽度 */
+  text-align: right;                      /* 对齐方式 */
+  color: var(--color-pink-soft);          /* 数字颜色 */
+}
+#write ol ol {
+  list-style: none;                     /* 移除默认数字 */
+  counter-reset: ol-roman-counter;      /* 罗马计数器 */
+}
+#write ol ol li {
+  position: relative;                   /* 符号定位 */
+  padding-left: -1.2em;                 /* 符号与文本距离 */
+  counter-increment: ol-roman-counter;  /* 递增罗马计数器 */
+}
+#write ol ol li::before {
+  content: counter(ol-roman-counter, lower-roman) ".";  /* 显示罗马计数器数字 */
+  position: absolute;                                   /* 符号定位 */
+  left: -3em;                                           /* 父元素的左侧距离 */
+  width: 2.5em;                                         /* 序号宽度 */
+  text-align: right;                                    /* 对齐方式 */
+  color: var(--color-pink-soft);                        /* 数字颜色 */
 }
 
 /** 引用块文本样式 */
 #write blockquote {
-    display: block;
-    font-size: 0.9em;
-    overflow: visible;
-    border-left: 10px solid var(--color-pink-light); /* 引用块左侧条框 */
-    padding: 15px 30px 15px 20px;                   /* 引用块内边距 */
-    margin-bottom: 20px;                            /* 引用块底部外边距 */
-    margin-top: 20px;                               /* 引用块顶部外边距 */
-    background-color: #e3c7e983;                  /* 引用块背景 */
-    color: var(--color-pink-heavy);                  /* 引用块文本颜色 */
-    border-radius: 8px;                             /* 引用块圆角 */
+  display: block;
+  font-size: 0.9em;
+  overflow: visible;
+  border-left: 10px solid var(--color-pink-light); /* 引用块左侧条框 */
+  padding: 15px 30px 15px 20px;                   /* 引用块内边距 */
+  margin-bottom: 20px;                            /* 引用块底部外边距 */
+  margin-top: 20px;                               /* 引用块顶部外边距 */
+  background-color: var(--color-pink-bright);                  /* 引用块背景 */
+  color: var(--color-pink-hot);                  /* 引用块文本颜色 */
+  border-radius: 8px;                             /* 引用块圆角 */
 }
