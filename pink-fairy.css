@@ -279,3 +279,114 @@ mark {
   word-break: break-all;                          /* 允许在任意字符间断词，防止溢出 */
 }
 
+/** 代码块样式 */
+/* 代码块整体容器 */
+.cm-s-inner.CodeMirror,
+.md-fences {
+  font-family: "新宋体";                                              /* 字体 */
+  font-size: 1.6rem;                                                  /* 字号 */
+  line-height: 2.2rem;                                                /* 行高 */
+  background: var(--color-pink-tender);                               /* 背景 */
+  border: 1px solid var(--color-pink-soft);                           /* 边框 */
+  border-radius: 12px;                                                /* 圆角 */
+  padding: 1rem 0 1rem 1rem;                                          /* 内边距 */
+  margin: 1rem 0 -1rem 0;                                             /* 外边距 */
+  position: relative;                                                 /* 位置 */
+}
+/* 行号区域样式 */
+.CodeMirror-gutters {
+  background: var(--color-pink-tender);                 /* 背景 */
+  border-right: 1px solid var(--color-pink-soft);       /* 右侧条框 */
+}
+/* 行号样式 */
+.CodeMirror-linenumber {
+  color: var(--color-pink-hot);   /* 行号颜色 */
+  padding: 0 8px;                 /* 内边距 */
+  font-size: 1.6rem;              /* 字号 */
+  font-weight: bold;              /* 加粗 */
+}
+/* 选中的代码行 */
+.CodeMirror-linebackground.CodeMirror-activeline-background {
+  border-left: 2px solid var(--color-pink-peach);             /* 左侧指示条 */
+}
+
+/** 代码块配色 */   /* 该部分配色来源于 deepseek */
+/* 关键字 (if, else, for, while, etc.) */
+.cm-s-inner .cm-keyword { 
+  color: #e83e8c;                      /* 玫红色 */
+  font-weight: bold;
+  text-shadow: 0 1px 1px rgba(232, 62, 140, 0.2);
+}
+/* 字符串 */
+.cm-s-inner .cm-string { 
+  color: #d23685;                      /* 深玫红色 */
+  background: rgba(255, 240, 245, 0.5); /* 轻微背景高亮 */
+  padding: 0 2px;
+  border-radius: 2px;
+}
+/* 字符串-2 (模板字符串等) */
+.cm-s-inner .cm-string-2 { 
+  color: #c2185b;                      /* 酒红色 */
+}
+/* 数字 */
+.cm-s-inner .cm-number { 
+  color: #ff6b93;                      /* 亮粉色 */
+  font-weight: bold;
+}
+/* 注释 */
+.cm-s-inner .cm-comment { 
+  color: #c8a2c8;                      /* 淡紫色 */
+  padding: 0 2px;
+  border-radius: 2px;
+}
+/* 变量 */
+.cm-s-inner .cm-variable { 
+  color: #9c27b0;                      /* 紫色 */
+}
+/* 变量-2 (属性等) */
+.cm-s-inner .cm-variable-2 { 
+  color: #7b1fa2;                      /* 深紫色 */
+}
+/* 变量-3 (特殊变量) */
+.cm-s-inner .cm-variable-3 { 
+  color: #6a1b9a;                      /* 紫罗兰色 */
+}
+/* 定义 (函数名、类名) */
+.cm-s-inner .cm-def { 
+  color: #ad1457;                      /* 深粉色 */
+  font-weight: 600;
+}
+/* 操作符 */
+.cm-s-inner .cm-operator { 
+  color: #e91e63;                      /* 粉色 */
+}
+/* 属性 */
+.cm-s-inner .cm-property { 
+  color: #c2185b;                      /* 酒红色 */
+}
+/* 内置函数/对象 */
+.cm-s-inner .cm-builtin { 
+  color: #d81b60;                      /* 玫红色 */
+}
+/* 标签 (HTML/XML 标签) */
+.cm-s-inner .cm-tag { 
+  color: #e83e8c;                      /* 亮玫红色 */
+}
+/* 属性名 (HTML/XML 属性) */
+.cm-s-inner .cm-attribute { 
+  color: #ad1457;                      /* 深粉色 */
+}
+/* 类型 (类名、类型名) */
+.cm-s-inner .cm-type { 
+  color: #880e4f;                      /* 深酒红色 */
+}
+/* 元数据 (装饰器、注解) */
+.cm-s-inner .cm-meta { 
+  color: #c2185b;                      /* 酒红色 */
+}
+/* 错误 */
+.cm-s-inner .cm-error { 
+  color: #ff4081;                      /* 亮粉色 */
+  background-color: rgba(255, 64, 129, 0.1);
+  border-bottom: 1px dashed #ff4081;
+}
