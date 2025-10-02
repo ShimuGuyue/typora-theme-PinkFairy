@@ -250,14 +250,15 @@ mark {
 
 /** 引用块文本样式 */
 #write blockquote {
-  display: block;
-  font-size: 0.9em;
-  overflow: visible;
-  border-left: 10px solid var(--color-pink-light); /* 引用块左侧条框 */
-  padding: 15px 30px 15px 20px;                   /* 引用块内边距 */
-  margin-bottom: 20px;                            /* 引用块底部外边距 */
-  margin-top: 20px;                               /* 引用块顶部外边距 */
-  background-color: var(--color-pink-bright);                  /* 引用块背景 */
-  color: var(--color-pink-hot);                  /* 引用块文本颜色 */
-  border-radius: 8px;                             /* 引用块圆角 */
+  display: block;                                   /* 独立区块 */
+  font-size: 1em;                                   /* 字体大小 */
+  overflow: visible;                                /* 溢出时完整显示 */
+  border-left: 10px solid var(--color-pink-light);  /* 引用块左侧条框 */
+  padding: 15px 30px 15px 20px;                     /* 引用块内边距 */
+  margin-bottom: 20px;                              /* 引用块底部外边距 */
+  margin-top: 20px;                                 /* 引用块顶部外边距 */
+  background-color: var(--color-pink-bright);       /* 引用块背景 */
+  color: var(--color-pink-hot);                     /* 引用块文本颜色 */
+  border-radius: 8px;                               /* 引用块圆角 */
 }
+
