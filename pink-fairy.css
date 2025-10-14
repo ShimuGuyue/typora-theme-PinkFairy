@@ -401,3 +401,34 @@ mark {
   background-color: rgba(255, 64, 129, 0.1);
   border-bottom: 1px dashed #ff4081;
 }
+
+/*
+  *=============================
+  * 表格样式
+  *=============================
+*/
+
+/* 表格容器样式 */
+#write table {
+  text-align: left;              /* 对齐方式 */
+  width: 100%;                   /* 表格宽度 */
+}
+
+/* 表头单元格和普通单元格共用样式 */
+#write table tr th,
+#write table tr td {
+  font-family: "楷体";                              /* 字体 */
+  font-size: var(--fontsize-normal);                /* 字号 */
+  border: 1px solid var(--color-pink-hot);          /* 单元格边框线 */
+  padding: 5px calc(0.5 * var(--fontsize-normal));  /* 单元格内边距 */
+  min-width: calc(11.5 * var(--fontsize-normal));   /* 最小宽度 */
+  vertical-align: top;                              /* 对齐方式 */
+}
+
+/* 表头单元格样式 */
+#write table tr th {
+  font-size: var(--fontsize-title5);            /* 字号 */
+  font-weight: bold;                            /* 文本加粗 */
+  color: var(--color-pink-hot);                 /* 文字颜色 */
+  background-color: var(--color-pink-bright);   /* 背景颜色 */
+}
