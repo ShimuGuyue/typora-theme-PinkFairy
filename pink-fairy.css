@@ -185,7 +185,6 @@ mark {
   background-color: var(--color-purple-herrscher);  /* 删除元素背景颜色 */
   color: var(--color-purple-herrscher);             /* 文本颜色与背景颜色相同，用于隐藏文本 */
   border: 1px solid var(--color-purple-herrscher);  /* 边框 */
-  padding: 0.1em 0.3em;                             /* 内边距：上下0.1em，左右0.3em */
   border-radius: 3px;                               /* 圆角 */
   text-decoration: none;                            /* 移除删除线 */
   transition: all 0.2s ease;                        /* 属性变化过渡时间 */
