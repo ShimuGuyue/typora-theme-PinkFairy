@@ -201,63 +201,63 @@ mark {
 /** 列表样式 */
 #write ul,
 #write ol {
+  list-style: none;                               /* 移除默认符号 */
   padding-left: calc(2 * var(--fontsize-normal)); /* 缩进距离 */
 }
-/* 无序列表 */
-#write ul {
-  list-style: none;     /* 移除默认符号 */
-  margin-left: -1.2em;  /* 整体左移 */
-}
-#write ul li {
-  position: relative;   /* 符号定位 */
-  padding-left: 1.2em;  /* 符号与文本距离 */
-}
+/* 无序（外层） */
 #write ul li::before {
-  content: "❀";                  /* 符号 */
-  position: absolute;             /* 符号定位 */
-  left: -0.5em;                   /* 父元素的左侧距离 */
-  color: var(--color-pink-soft);  /* 符号颜色 */
+  content: "❀";                            /* 符号 */
+  position: absolute;                       /* 符号位置 */
+  left: calc(-2 * var(--fontsize-normal));  /* 符号与文本距离 */
+  width: calc(2 * var(--fontsize-normal));  /* 符号区域宽度 */
+  text-align: center;                       /* 符号区域对齐方式 */
+  color: var(--color-pink-soft);            /* 符号颜色 */
 }
-#write ul ul li::before {
-  content: "➳";                  /* 符号 */
-  position: absolute;             /* 符号定位 */
-  left: -0.5em;                   /* 父元素的左侧距离 */
-  color: var(--color-pink-soft);  /* 符号颜色 */
+/* 无序（内层） */
+#write ul ul li::before,
+#write ol ul li::before {
+  content: "➳";                            /* 符号 */
+  position: absolute;                       /* 符号位置 */
+  left: calc(-2 * var(--fontsize-normal));  /* 符号与文本距离 */
+  width: calc(2 * var(--fontsize-normal));  /* 符号区域宽度 */
+  text-align: center;                       /* 符号区域对齐方式 */
+  color: var(--color-pink-soft);            /* 符号颜色 */
 }
-/* 有序列表 */
+
+/* 有序（外层） */
 #write ol {
-  list-style: none;                     /* 移除默认数字 */
-  counter-reset: ol-digit-counter;      /* 数字计数器 */
+  counter-reset: ol-count;      /* 数字计数器 */
 }
 #write ol li {
-  position: relative;                   /* 符号定位 */
-  padding-left: -1.2em;                 /* 符号与文本距离 */
-  counter-increment: ol-digit-counter;  /* 递增数字计数器 */
+  position: relative;           /* 符号定位 */
+  counter-increment: ol-count;  /* 递增数字计数器 */
 }
 #write ol li::before {
-  content: counter(ol-digit-counter) "."; /* 显示计数器数字 */
-  position: absolute;                     /* 符号定位 */
-  left: -3em;                             /* 父元素的左侧距离 */
-  width: 2.5em;                           /* 序号宽度 */
-  text-align: right;                      /* 对齐方式 */
-  color: var(--color-pink-soft);          /* 数字颜色 */
+  content: counter(ol-count) ".";           /* 显示计数器数字 */
+  position: absolute;                       /* 符号定位 */
+  left: calc(-4 * var(--fontsize-normal));  /* 符号与文本距离 */
+  width: calc(4 * var(--fontsize-normal));  /* 符号区域宽度 */
+  text-align: right;                        /* 符号区域对齐方式 */
+  color: var(--color-pink-soft);            /* 符号颜色 */
 }
+/* 有序（内层） */
+#write ul ol,
 #write ol ol {
-  list-style: none;                     /* 移除默认数字 */
-  counter-reset: ol-roman-counter;      /* 罗马计数器 */
+  counter-reset: xl-ol-count;   /* 数字计数器 */
 }
+#write ul ol li,
 #write ol ol li {
-  position: relative;                   /* 符号定位 */
-  padding-left: -1.2em;                 /* 符号与文本距离 */
-  counter-increment: ol-roman-counter;  /* 递增罗马计数器 */
+  position: relative;             /* 符号定位 */
+  counter-increment: xl-ol-count; /* 递增罗马计数器 */
 }
+#write ul ol li::before,
 #write ol ol li::before {
-  content: counter(ol-roman-counter, lower-roman) ".";  /* 显示罗马计数器数字 */
-  position: absolute;                                   /* 符号定位 */
-  left: -3em;                                           /* 父元素的左侧距离 */
-  width: 2.5em;                                         /* 序号宽度 */
-  text-align: right;                                    /* 对齐方式 */
-  color: var(--color-pink-soft);                        /* 数字颜色 */
+  content: counter(xl-ol-count, lower-roman) ".";   /* 显示计数器数字 */
+  position: absolute;                               /* 符号定位 */
+  left: calc(-4 * var(--fontsize-normal));          /* 符号与文本距离 */
+  width: calc(4 * var(--fontsize-normal));          /* 符号区域宽度 */                                         /* 序号宽度设置为两个中文字符 */
+  text-align: right;                                /* 对齐方式 */
+  color: var(--color-pink-soft);                    /* 数字颜色 */
 }
 
 /** 引用块文本样式 */
