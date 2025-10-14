@@ -461,3 +461,22 @@ mark {
   border-color: var(--color-pink-peach);      /* 边框颜色 */
   background-color: var(--color-pink-bright); /* 背景颜色 */
 }
+
+/*
+ *=============================
+ * 图片样式
+ *=============================
+*/
+
+/* 基础样式 */
+#write img {
+  margin: 0 auto;         /* 水平居中 */
+  max-width: 90%;         /* 图片最大宽度 */
+  display: block;         /* 块级元素，独占一行 */
+  border-radius: 0.5rem;  /* 圆角 */
+  background: none;       /* 移除背景 */
+  border: none;           /* 移除边框 */
+  box-shadow: 
+    -4px 0 8px var(--color-pink-light),  /* 左侧阴影 */
+    0 4px 8px var(--color-pink-light);   /* 下边阴影 */
+}
