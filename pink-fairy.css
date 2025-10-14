@@ -74,22 +74,22 @@
   content: " ☙";       /* 三级标题后缀 */
 }
 #write h4::before {
-  content: " ♥ ";      /* 一级标题前缀 */
+  content: " ♥ ";      /* 四级标题前缀 */
 }
 #write h4::after {
-  content: " ♥";       /* 一级标题前缀 */
+  content: " ♥";       /* 四级标题后缀 */
 }
 #write h5::before {
-  content: " ♪ ";      /* 二级标题前缀 */
+  content: " ♪ ";      /* 五级标题前缀 */
 }
 #write h5::after {
-  content: " ♪";       /* 三级标题后缀 */
+  content: " ♪";       /* 五级标题后缀 */
 }
 #write h6::before {
   content: "❖ ";      /* 六级标题前缀 */
 }
 #write h6::after {
-  content: " ❖";      /* 六级标题前缀 */
+  content: " ❖";      /* 六级标题后缀 */
 }
 
 /** 标题字号 */
@@ -539,4 +539,39 @@ sup.md-footnote {
 
 .md-comment {
   color: #c8a2c8;
+}
+
+/*
+  *=============================
+  * 复选框样式
+  *=============================
+*/
+
+#write input[type="checkbox"] { /* 隐藏原生复选框 */
+  width: 0;   
+}
+
+#write .task-list-item::before {  /* 移除无序列表的符号 */
+  display: none !important;
+}
+
+/* 复选框样式 */
+.task-list-item input::before {
+  content: "";                                        /* 空白复选框 */
+  display: inline-block;                              /* 行内块级显示 */
+  width: var(--fontsize-title5);                      /* 复选框宽度 */
+  height: var(--fontsize-title5);                     /* 复选框高度 */
+  vertical-align: middle;                             /* 垂直居中对齐 */
+  border: 1px solid var(--color-pink-soft);           /* 复选框颜色 */
+  border-radius: calc(0.5 * var(--fontsize-title5));  /* 圆形复选框 */
+  margin-left: calc(-1 * var(--fontsize-normal));     /* 左移 */
+  margin-top: -0.8rem;                                /* 上移 */
+}
+
+/* 对勾样式 */
+.task-list-item input:checked::before {
+  content: "♪";                         /* 符号 */
+  color: var(--color-pink-hot);         /* 颜色 */
+  font-size:var(--fontsize-title1);     /* 字号 */
+  line-height: var(--fontsize-normal);  /* 行高 */
 }
