@@ -634,3 +634,26 @@ span.file-node-title-ext-part {
 .outline-item {
   padding-left: var(--fontsize-normal); /* 缩进 */
 }
+
+/*
+  *=============================
+  * 滚动条样式
+  *=============================
+*/
+
+/* 基础样式 */
+::-webkit-scrollbar {
+  width: 1rem;  /* 宽度 */
+}
+
+/* 轨道样式 */
+::-webkit-scrollbar-track {
+  border-radius: 10px;                        /* 圆角 */
+  background-color: var(--color-pink-peach);  /* 颜色 */
+}
+
+/* 滑块样式 */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;                        /* 圆角 */
+  background-color: var(--color-pink-light);  /* 颜色 */
+}
