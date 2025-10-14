@@ -575,3 +575,62 @@ sup.md-footnote {
   font-size:var(--fontsize-title1);     /* 字号 */
   line-height: var(--fontsize-normal);  /* 行高 */
 }
+
+/*
+ *=============================
+ *侧边栏样式
+ *=============================
+*/
+
+/** 主容器样式 */
+#typora-sidebar {
+  height: 100%;                       /* 高度 */
+  overflow-x: hidden;                 /* 水平方向溢出时隐藏 */
+  font-family: "GlowSansSC";          /* 字体 */
+  color: var(--color-pink-hot);       /* 颜色 */
+  font-size: var(--fontsize-normal);  /* 字号 */
+  font-weight: bold;                  /* 加粗 */
+}
+
+/** 文件树样式 */
+
+/* 文件图标样式 */
+.file-node-content {
+  color: var(--color-pink-soft);        /* 颜色 */
+  line-height: var(--fontsize-title4);  /* 行高 */
+}
+
+/* 文件名样式 */
+span.file-node-title-name-part {
+  color: var(--text-color);  /* 颜色 */
+}
+
+/* 文件扩展名样式 */
+span.file-node-title-ext-part {
+  color: var(--color-pink-soft);  /* 颜色 */
+}
+
+/* 激活的文件树节点样式 */
+.file-tree-node.active > .file-node-background {
+  border-left: 4px solid var(--color-pink-soft);  /* 左侧边框 */
+}
+
+/** 侧边栏大纲样式 */
+
+/* 大纲内容区域样式 */
+#outline-content {
+  
+  line-height: var(--fontsize-title4);  /* 行高 */
+  font-size: var(--fontsize-normal);    /* 字号 */
+}
+
+/* 激活的大纲项样式 */
+#outline-content .outline-active,
+.pin-outline .outline-active {
+  color: var(--color-pink-light); /* 颜色 */
+}
+
+/* 大纲项通用样式 */
+.outline-item {
+  padding-left: var(--fontsize-normal); /* 缩进 */
+}
