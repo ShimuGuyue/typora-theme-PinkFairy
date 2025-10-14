@@ -480,3 +480,31 @@ mark {
     -4px 0 8px var(--color-pink-light),  /* 左侧阴影 */
     0 4px 8px var(--color-pink-light);   /* 下边阴影 */
 }
+
+/*
+ *=============================
+ * 脚注样式
+ *=============================
+*/
+
+/* 脚注标记样式 */
+sup.md-footnote {
+  font-family: "楷体", "Consolas";            /* 字体 */
+  background-color: var(--color-pink-tender); /* 背景颜色*/
+  color: var(--color-pink-hot);               /* 文本颜色 */
+}
+
+/* 脚注定义样式 */
+.md-def-name {
+  font-family: "楷体", "Consolas";    /* 字体 */
+  font-size: var(--fontsize-normal);  /* 字号 */
+  color: var(--color-pink-hot);       /* 文本颜色 */
+}
+
+/* 脚注内容样式 */
+.footnotes,
+.footnotes p,
+.footnotes li {
+  font-family: "楷体", "Consolas";    /* 字体 */
+  font-size: var(--fontsize-normal);  /* 字号 */
+}
