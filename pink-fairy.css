@@ -17,11 +17,23 @@
 */
 
 :root {
+/** 颜色 */
   --color-pink-soft:         #FF9EC8;       /* 柔粉 */
   --color-pink-hot:          #FF77CC;       /* 艳粉 */
   --color-pink-light:        #ffaaff;       /* 浅粉 */
   --color-pink-bright:       #FFEEF8;       /* 亮粉 */
+  --color-pink-peach:        #F39ACD;       /* 桃粉 */
+  --color-pink-tender:       #FFF0F5;       /* 嫩粉 */
   --color-purple-herrscher : #6D6AA7;       /* 侵蚀紫 */
+
+/** 字号 */
+  --fontsize-normal: 1.20rem;
+  --fontsize-title1: 2.50rem;
+  --fontsize-title2: 2.00rem;
+  --fontsize-title3: 1.80rem;
+  --fontsize-title4: 1.55rem;
+  --fontsize-title5: 1.35rem;
+  --fontsize-title6: 1.20rem;
 }
 
 /*
@@ -37,9 +49,9 @@
 #write h4,
 #write h5,
 #write h6 {
-    font-family: "微软雅黑";            /* 标题字体 */
-    margin: 0.8em 0 0.8em;              /* 标题外边距 */
-    color: var(--color-pink-soft);      /* 标题颜色 */
+  font-family: "微软雅黑";          /* 标题字体 */
+  margin: 0.8em 0 0.8em;            /* 标题外边距 */
+  color: var(--color-pink-soft);    /* 标题颜色 */
 }
 
 /** 标题标识符 */
@@ -82,22 +94,22 @@
 
 /** 标题字号 */
 #write h1 {
-    font-size: 2.5rem;   /* 一级标题字号 */
+  font-size: var(--fontsize-title1);
 }
 #write h2 {
-    font-size: 2.0rem;   /* 二级标题字号 */
+  font-size: var(--fontsize-title2);
 }
 #write h3 {
-    font-size: 1.8rem;   /* 三级标题字号 */
+  font-size: var(--fontsize-title3);
 }
 #write h4 {
-    font-size: 1.55rem;  /* 四级标题字号 */
+  font-size: var(--fontsize-title4);
 }
 #write h5 {
-    font-size: 1.35rem;  /* 五级标题字号 */
+  font-size: var(--fontsize-title5);
 }
 #write h6 {
-    font-size: 1.2rem;   /* 六级标题字号 */
+  font-size: var(--fontsize-title6);
 }
 
 /*
@@ -126,32 +138,32 @@ hr {
 
 /** 常规文本样式 */
 #write {
-  max-width: 1000px;          /* 最大宽度 */
-  overflow-wrap: break-word;  /* 自动换行 */
-  margin-bottom: 60rem;       /* 底部空白 */
-  font-size: 1.20rem;         /* 字号 */
-  line-height: 1.6;           /* 行高 */
-  font-family: "新宋体";      /* 字体 */
-  font-weight: bold           /* 加粗 */
+  max-width: 1000px;                    /* 最大宽度 */
+  overflow-wrap: break-word;            /* 自动换行 */
+  margin-bottom: 60rem;                 /* 底部空白 */
+  font-size: var(--fontsize-normal);    /* 字号 */
+  line-height: 1.6;                     /* 行高 */
+  font-family: "新宋体";                /* 字体 */
+  font-weight: bold                     /* 加粗 */
 }
 
 /** 斜体文本样式 */
 #write em
 {
-  font-family: "Consolas", "华文行楷";    /* 斜体字体 */
-  font-size: 1.20rem;                     /* 字号 */
-  margin-right: 0.3em;                    /* 与右侧文本拉开距离 */
+  font-family: "Consolas", "华文行楷";    /* 字体 */
+  font-size: var(--fontsize-normal);      /* 字号 */
+  margin-right: 0.3em;                    /* 与右侧文本距离 */
 }
 
 /** 加粗文本样式 */
 #write strong {
-  font-size: 1.20rem;             /* 字号增大 */
-  color: var(--color-pink-hot);   /* 粗体颜色 */
+  font-size: var(--fontsize-normal);  /* 字号 */
+  color: var(--color-pink-hot);       /* 颜色 */
 }
 
 /** 链接文本样式 */
 #write a {
-  color: var(--color-pink-light); /* 链接文本颜色 */
+  color: var(--color-pink-light);     /* 颜色 */
 }
 #write .md-p a,
 #write .md-heading a {
@@ -189,7 +201,7 @@ mark {
 /** 列表样式 */
 #write ul,
 #write ol {
-  padding-left: 2em;    /* 缩进距离 */
+  padding-left: calc(2 * var(--fontsize-normal)); /* 缩进距离 */
 }
 /* 无序列表 */
 #write ul {
