@@ -432,3 +432,32 @@ mark {
   color: var(--color-pink-hot);                 /* 文字颜色 */
   background-color: var(--color-pink-bright);   /* 背景颜色 */
 }
+
+/*
+  *=============================
+  *目录样式
+  *=============================
+*/
+
+/* 文本格式 */
+.md-toc-content {
+  font-family: "楷体";                /* 字体 */
+  font-size: var(--fontsize-title5);  /* 字号 */
+}
+
+/* 目录样式 */
+#write div.md-toc-tooltip {
+  font-family: "楷体";                        /* 字体 */
+  font-size: var(--fontsize-title5);          /* 字号 */
+  color: var(--color-pink-hot);               /* 文字颜色 */
+  position: static;                           /* 定位方式 */
+  margin-top: 10px;                           /* 上边距 */
+  border-top: none;                           /* 去除上边框 */
+}
+
+/* 目录获得焦点时的样式 */
+.md-toc:focus .md-toc-content {
+  border-radius: 0.5rem;                      /* 圆角边框 */
+  border-color: var(--color-pink-peach);      /* 边框颜色 */
+  background-color: var(--color-pink-bright); /* 背景颜色 */
+}
