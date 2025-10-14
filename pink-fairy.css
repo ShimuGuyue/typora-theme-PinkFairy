@@ -417,7 +417,7 @@ mark {
 /* 表头单元格和普通单元格共用样式 */
 #write table tr th,
 #write table tr td {
-  font-family: "楷体";                              /* 字体 */
+  font-family: "楷体", "Consolas";                              /* 字体 */
   font-size: var(--fontsize-normal);                /* 字号 */
   border: 1px solid var(--color-pink-hot);          /* 单元格边框线 */
   padding: 5px calc(0.5 * var(--fontsize-normal));  /* 单元格内边距 */
@@ -441,13 +441,13 @@ mark {
 
 /* 文本格式 */
 .md-toc-content {
-  font-family: "楷体";                /* 字体 */
+  font-family: "楷体", "Consolas";    /* 字体 */
   font-size: var(--fontsize-title5);  /* 字号 */
 }
 
 /* 目录样式 */
 #write div.md-toc-tooltip {
-  font-family: "楷体";                        /* 字体 */
+  font-family: "楷体", "Consolas";            /* 字体 */
   font-size: var(--fontsize-title5);          /* 字号 */
   color: var(--color-pink-hot);               /* 文字颜色 */
   position: static;                           /* 定位方式 */
@@ -473,7 +473,7 @@ mark {
   margin: 0 auto;         /* 水平居中 */
   max-width: 90%;         /* 图片最大宽度 */
   display: block;         /* 块级元素，独占一行 */
-  border-radius: 0.5rem;  /* 圆角 */
+  border-radius: 1rem;    /* 圆角 */
   background: none;       /* 移除背景 */
   border: none;           /* 移除边框 */
   box-shadow: 
