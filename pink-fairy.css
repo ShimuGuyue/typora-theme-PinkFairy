@@ -294,15 +294,15 @@ mark {
 /* 代码块整体容器 */
 .cm-s-inner.CodeMirror,
 .md-fences {
-  font-family: "新宋体";                                              /* 字体 */
-  font-size: var(--fontsize-title5);                                  /* 字号 */
-  line-height: 2.2rem;                                                /* 行高 */
-  background: var(--color-pink-tender);                               /* 背景 */
-  border: 1px solid var(--color-pink-soft);                           /* 边框 */
-  border-radius: 12px;                                                /* 圆角 */
-  padding: 1rem 0 1rem 1rem;                                          /* 内边距 */
-  margin: 1rem 0 -1rem 0;                                             /* 外边距 */
-  position: relative;                                                 /* 位置 */
+  font-family: "仿宋";                        /* 字体 */
+  font-size: var(--fontsize-title5);          /* 字号 */
+  line-height: 2rem;                          /* 行高 */
+  background: var(--color-pink-tender);       /* 背景 */
+  border: 1px solid var(--color-pink-soft);   /* 边框 */
+  border-radius: 12px;                        /* 圆角 */
+  padding: 1rem 0 1rem 1rem;                  /* 内边距 */
+  margin: 1rem 0 -1rem 0;                     /* 外边距 */
+  position: relative;                         /* 位置 */
 }
 /* 行号区域样式 */
 .CodeMirror-gutters {
@@ -331,7 +331,6 @@ mark {
 /* 字符串 */
 .cm-s-inner .cm-string { 
   color: #d23685;                      /* 深玫红色 */
-  background: rgba(255, 240, 245, 0.5); /* 轻微背景高亮 */
   padding: 0 2px;
   border-radius: 2px;
 }
@@ -342,7 +341,6 @@ mark {
 /* 数字 */
 .cm-s-inner .cm-number { 
   color: #ff6b93;                      /* 亮粉色 */
-  font-weight: bold;
 }
 /* 注释 */
 .cm-s-inner .cm-comment { 
@@ -365,7 +363,6 @@ mark {
 /* 定义 (函数名、类名) */
 .cm-s-inner .cm-def { 
   color: #ad1457;                      /* 深粉色 */
-  font-weight: 600;
 }
 /* 操作符 */
 .cm-s-inner .cm-operator { 
