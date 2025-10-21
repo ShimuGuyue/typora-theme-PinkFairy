@@ -1,10 +1,12 @@
+---
+
 [TOC]
 
 This is a directory with a regular state above, which changes to the following state when the focus is obtained.
 
 [TOC]
 
-
+---
 
 # This is a first title
 
@@ -16,11 +18,11 @@ This is a directory with a regular state above, which changes to the following s
 
 ##### This is a fifth title
 
-###### This is s sixth title
+###### This is a sixth title
 
-This is normal text.
+This is regular text with the same font size as the sixth level title, but the different fonts make the title appear slightly larger.
 
-
+---
 
 This is a dividing line that elegantly divides the text into two parts, one on top,
 
@@ -28,9 +30,9 @@ This is a dividing line that elegantly divides the text into two parts, one on t
 
 and the other part is below.
 
+---
 
-
-This is a regular font text, plain and unremarkable. But the font I am using is New Song typeface, a very beautiful equal width font. But its only drawback is that it is too detailed, so I bolded it to better display the text.
+This is a regular font text, plain and unremarkable. But I used the very beautiful Song style font with equal width. However, its only drawback is that it is too detailed, so I bolded it to better display the text.
 
 
 
@@ -58,6 +60,10 @@ This is a regular font text, plain and unremarkable. But the font I am using is 
 
 
 
+<!-- This is a commented content with the same style as the comment text in the code block. -->
+
+---
+
 + This is an unordered list
   + The symbols are all soft pink 	
   + The inner symbol uses arrows
@@ -70,21 +76,21 @@ This is a regular font text, plain and unremarkable. But the font I am using is 
 
 The indentation of each layer in the list is two Chinese characters, which is four English characters.
 
-
+---
 
 > This is a reference block.
 
-
+---
 
 `This is an inline code block ` `print ("hello world!")`
 
 `The color scheme and highlighted text of the code blocks within the line are similar, but softer.`
 
-
+---
 
 ```c++
 //This is a code block
-//The font of the code block is 新宋体
+//The font of the code block is 仿宋
 #include <iostream>
 
 int main()
@@ -97,26 +103,35 @@ int main()
 
 
 
+---
+
+
+
 | This is a table     | This is the header                                           |      |
 | :------------------ | :----------------------------------------------------------- | :--- |
 | This is the element | When there are multiple lines<br />of text in a cell, <br />align the top of the text |      |
 |                     |                                                              |      |
 
-
+---
 
 ![This is an image that will not completely fill the container; The image has been set to rounded corners and light pink shadows have been added around the edges](resource/images/100368475_p1_master1200.jpg)
 
+---
 
-
-This is a footnote [^ footnote]
+This is a [^ footnote]
 
 [^ Footnote]: This is a footnote.
 
+---
 
+$This \; is \; an \; intra \; line \; mathematical \; formula: 1 \leq n \leq 10 ^ 9.$
 
 $This \; is \; an \; intra \; line \; mathematical \; formula: 1 \leq n \leq 10 ^ 9.$
 
-$This \; is \; an \; intra \; line \; mathematical \; formula: 1 \leq n \leq 10 ^ 9.$
+
+
+---
+
 $$
 This \; is \; a \; mathematical \; formula \; block\sum_{i = 1}^{n}(2 \times 10 ^ i)
 $$
@@ -125,11 +140,10 @@ $$
 This \; is \; a \; mathematical \; formula \; block\sum_{i = 1}^{n}(2 \times 10 ^ i)
 $$
 
+---
 
+- [ ] This is an unchecked task list.
+- [x] This is a task listthat has already been selected. Change the selected symbol to a musical note.
 
-<!-- This is a commented content with the same style as the comment text in the code block. -->
+---
 
-
-
-- [ ] This is an unchecked checkbox.
-- [x] This is a checkbox that has already been selected. Change the selected symbol to a musical note.

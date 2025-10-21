@@ -27,13 +27,13 @@
   --color-purple-herrscher : #6D6AA7;       /* 侵蚀紫 */
 
 /** 字号 */
-  --fontsize-normal: 1.20rem;
   --fontsize-title1: 2.50rem;
   --fontsize-title2: 2.00rem;
   --fontsize-title3: 1.80rem;
   --fontsize-title4: 1.55rem;
   --fontsize-title5: 1.35rem;
-  --fontsize-title6: 1.20rem;
+  --fontsize-title6: 1.25rem;
+  --fontsize-normal: var(--fontsize-title6);
 }
 
 /*
@@ -143,7 +143,7 @@ hr {
   margin-bottom: 60rem;                 /* 底部空白 */
   font-size: var(--fontsize-normal);    /* 字号 */
   line-height: 1.6;                     /* 行高 */
-  font-family: "新宋体";                /* 字体 */
+  font-family: "仿宋";                  /* 字体 */
   font-weight: bold                     /* 加粗 */
 }
 
@@ -286,7 +286,7 @@ mark {
   word-wrap: break-word;                          /* 换行时长单词在任意字符间断行 */
   margin: 1px;                                    /* 外边距 */
   background-color: var(--color-pink-bright);     /* 背景颜色 */
-  font-family: "新宋体";                          /* 字体 */
+  font-family: "仿宋";                            /* 字体 */
   word-break: break-all;                          /* 允许在任意字符间断词，防止溢出 */
 }
 
@@ -525,7 +525,7 @@ sup.md-footnote {
 /* 行内公式编辑器 */
 .md-inline-math script {
   color: var(--color-pink-hot); /* 文本颜色 */
-  font-family: "新宋体";        /* 字体 */
+  font-family: "仿宋";          /* 字体 */
 }
 
 /*
