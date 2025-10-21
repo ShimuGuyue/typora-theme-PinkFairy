@@ -74,22 +74,22 @@
   content: " ☙";       /* 三级标题后缀 */
 }
 #write h4::before {
-  content: " ♥ ";      /* 四级标题前缀 */
+  content: " ♥ ";      /* 一级标题前缀 */
 }
 #write h4::after {
-  content: " ♥";       /* 四级标题后缀 */
+  content: " ♥";       /* 一级标题前缀 */
 }
 #write h5::before {
-  content: " ♪ ";      /* 五级标题前缀 */
+  content: " ♪ ";      /* 二级标题前缀 */
 }
 #write h5::after {
-  content: " ♪";       /* 五级标题后缀 */
+  content: " ♪";       /* 三级标题后缀 */
 }
 #write h6::before {
   content: "❖ ";      /* 六级标题前缀 */
 }
 #write h6::after {
-  content: " ❖";      /* 六级标题后缀 */
+  content: " ❖";      /* 六级标题前缀 */
 }
 
 /** 标题字号 */
@@ -282,7 +282,7 @@ mark {
 /** 行内代码样式 */
 #write code {
   color: var(--color-pink-peach);                 /* 代码文字颜色 */
-  font-size: 1.2rem;                              /* 字体大小 */
+  font-size: var(--fontsize-normal);              /* 字号 */
   word-wrap: break-word;                          /* 换行时长单词在任意字符间断行 */
   margin: 1px;                                    /* 外边距 */
   background-color: var(--color-pink-bright);     /* 背景颜色 */
@@ -295,7 +295,7 @@ mark {
 .cm-s-inner.CodeMirror,
 .md-fences {
   font-family: "新宋体";                                              /* 字体 */
-  font-size: 1.6rem;                                                  /* 字号 */
+  font-size: var(--fontsize-title5);                                  /* 字号 */
   line-height: 2.2rem;                                                /* 行高 */
   background: var(--color-pink-tender);                               /* 背景 */
   border: 1px solid var(--color-pink-soft);                           /* 边框 */
