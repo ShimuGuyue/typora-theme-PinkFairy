@@ -321,6 +321,13 @@ mark {
   border-left: 2px solid var(--color-pink-peach);             /* 左侧指示条 */
 }
 
+/* 隐藏所有滚动条 */
+.cm-s-inner.CodeMirror::-webkit-scrollbar,
+.md-fences::-webkit-scrollbar,
+.CodeMirror-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 /** 代码块配色 */   /* 该部分配色来源于 deepseek */
 /* 关键字 (if, else, for, while, etc.) */
 .cm-s-inner .cm-keyword { 
