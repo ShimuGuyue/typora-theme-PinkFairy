@@ -647,17 +647,25 @@ span.file-node-title-ext-part {
 
 /* 基础样式 */
 ::-webkit-scrollbar {
-  width: 1rem;  /* 宽度 */
+  width: 14px;  /* 宽度 */
 }
 
 /* 轨道样式 */
 ::-webkit-scrollbar-track {
-  border-radius: 10px;                        /* 圆角 */
-  background-color: var(--color-pink-peach);  /* 颜色 */
+  background: var(--color-pink-tender);   /* 背景颜色 */
+  border-radius: 7px;                     /* 圆角 */
 }
 
 /* 滑块样式 */
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;                        /* 圆角 */
+  border-radius: 7px;                         /* 圆角 */
   background-color: var(--color-pink-light);  /* 颜色 */
+  border: 2px solid transparent;              /* 透明边框，用于不同级滑块间距 */
 }
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-pink-light);  /* 悬停时颜色 */
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--color-pink-peach);  /* 点击时颜色 */
+}
+
