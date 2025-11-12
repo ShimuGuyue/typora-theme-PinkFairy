@@ -4,15 +4,13 @@
 
 [PinkFairy](https://github.com/ShimuGuyue/typora-theme-PinkFairy) 是一款以 [Fugu](https://github.com/sinlatansen/typora-theme-Fugu) 主题作为基础骨架修改得到的 **Typora** 粉色风格浅色主题。
 
-由于本人非常喜欢**爱莉希雅**，又比较想自己制作一款好看的主题，机缘巧合之下便诞生了这个项目。
+这是一款以**爱莉希雅**配色为风格的主题，主要以粉色和白色作为基调，佐以一些特色符号点缀，以尽可能体现无暇的少女身上的可爱气质。『**将爱意传递下去吧！**』
 
-整个主题以粉色和白色作为基调，佐以一些符号点缀，尽可能将爱莉希雅身上那种温柔美丽的气质体现出来，将爱意传递给更多的人。
-
-仅以此篇，献给优雅可爱的**粉色妖精小姐——爱莉希雅**！
+以此主题献给飞花般绚丽的少女——**粉色妖精小姐——爱莉希雅**。愛門！
 
 ## 使用说明
 
-将『pink-fairy.css』文件下载后复制到『C:\Users\\\$username$\AppData\Roaming\Typora\themes\』后重启 typora 应用即可在『主题』选项卡中找到并使用该主题。
+将『[pink-fairy.css](https://github.com/ShimuGuyue/typora-theme-PinkFairy/blob/PinkFairy/pink-fairy.css)』文件下载后复制到『C:\\Users\\\$username\$\\AppData\\Roaming\\Typora\\themes\\』后重启 typora 应用即可在『主题』选项卡中找到并使用该主题。
 
 ## 主题特色
 
