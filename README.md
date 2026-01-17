@@ -110,3 +110,7 @@
 + 2025-10-11（V3.0）：修改页面滚动条样式。
 + 2025-11-27（V3.1）：去除分割线默认框线
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=ShimuGuyue/typora-theme-PinkFairy&type=timeline&legend=top-left)](https://www.star-history.com/#ShimuGuyue/typora-theme-PinkFairy&type=timeline&legend=top-left)
+
