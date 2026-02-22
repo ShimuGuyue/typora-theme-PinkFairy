@@ -50,46 +50,33 @@
 #write h5,
 #write h6 {
   font-family: "微软雅黑";          /* 标题字体 */
-  margin: 0.8em 0 0.8em;            /* 标题外边距 */
   color: var(--color-pink-soft);    /* 标题颜色 */
 }
 
 /** 标题标识符 */
 #write h1::before {
-  content: "❀ ";       /* 一级标题前缀 */
+  content: "❀ ";   /* 一级标题前缀 */
 }
 #write h1::after {
-  content: " ❀";       /* 一级标题后缀 */
+  content: " ❀";   /* 一级标题后缀 */
 }
 #write h2::before {
-  content: "➳ ";       /* 二级标题前缀 */
+  content: "➳ ";   /* 二级标题前缀 */
 }
 #write h2::after {
-  content: " ➳";       /* 二级标题后缀 */
+  content: " ➳";   /* 二级标题后缀 */
 }
 #write h3::before {
-  content: "☙ ";       /* 三级标题前缀 */
+  content: "♥ ";    /* 三级标题前缀 */
 }
 #write h3::after {
-  content: " ☙";       /* 三级标题后缀 */
+  content: " ♥";    /* 三级标题后缀 */
 }
 #write h4::before {
-  content: " ♥ ";      /* 一级标题前缀 */
+  content: "♪ ";    /* 四级标题前缀 */
 }
 #write h4::after {
-  content: " ♥";       /* 一级标题前缀 */
-}
-#write h5::before {
-  content: " ♪ ";      /* 二级标题前缀 */
-}
-#write h5::after {
-  content: " ♪";       /* 三级标题后缀 */
-}
-#write h6::before {
-  content: "❖ ";      /* 六级标题前缀 */
-}
-#write h6::after {
-  content: " ❖";      /* 六级标题前缀 */
+  content: " ♪";    /* 四级标题前缀 */
 }
 
 /** 标题字号 */
