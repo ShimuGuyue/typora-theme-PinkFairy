@@ -33,8 +33,14 @@
   --fontsize-title4: 1.55rem;
   --fontsize-title5: 1.35rem;
   --fontsize-title6: 1.25rem;
-  --fontsize-normal: var(--fontsize-title6);
+  --fontsize-normal: 1.25rem;
+  --fontsize-small : 1.00rem;
+
+/** 字体 */
+  --fontfamily-normal: "仿宋"
 }
+
+
 
 /*
   *=============================
@@ -76,7 +82,7 @@
   content: "♪ ";    /* 四级标题前缀 */
 }
 #write h4::after {
-  content: " ♪";    /* 四级标题前缀 */
+  content: " ♪";    /* 四级标题后缀 */
 }
 
 /** 标题字号 */
@@ -130,8 +136,8 @@ hr {
   overflow-wrap: break-word;            /* 自动换行 */
   margin-bottom: 60rem;                 /* 底部空白 */
   font-size: var(--fontsize-normal);    /* 字号 */
+  font-family: var(--fontfamily-normal);/* 字体 */
   line-height: 1.6;                     /* 行高 */
-  font-family: "仿宋";                  /* 字体 */
   font-weight: bold                     /* 加粗 */
 }
 
@@ -196,8 +202,6 @@ mark {
   content: "❀";                            /* 符号 */
   position: absolute;                       /* 符号位置 */
   left: calc(-2 * var(--fontsize-normal));  /* 符号与文本距离 */
-  width: calc(2 * var(--fontsize-normal));  /* 符号区域宽度 */
-  text-align: center;                       /* 符号区域对齐方式 */
   color: var(--color-pink-soft);            /* 符号颜色 */
 }
 /* 无序（内层） */
@@ -206,51 +210,44 @@ mark {
   content: "➳";                            /* 符号 */
   position: absolute;                       /* 符号位置 */
   left: calc(-2 * var(--fontsize-normal));  /* 符号与文本距离 */
-  width: calc(2 * var(--fontsize-normal));  /* 符号区域宽度 */
-  text-align: center;                       /* 符号区域对齐方式 */
   color: var(--color-pink-soft);            /* 符号颜色 */
 }
 
 /* 有序（外层） */
 #write ol {
-  counter-reset: ol-count;      /* 数字计数器 */
+  list-style: none;         /* 移除默认符号 */
+  counter-reset: ol-count;  /* 数字计数器 */
 }
 #write ol li {
-  position: relative;           /* 符号定位 */
   counter-increment: ol-count;  /* 递增数字计数器 */
 }
 #write ol li::before {
   content: counter(ol-count) ".";           /* 显示计数器数字 */
   position: absolute;                       /* 符号定位 */
-  left: calc(-4 * var(--fontsize-normal));  /* 符号与文本距离 */
-  width: calc(4 * var(--fontsize-normal));  /* 符号区域宽度 */
-  text-align: right;                        /* 符号区域对齐方式 */
+  left: calc(-2 * var(--fontsize-normal));  /* 符号与文本距离 */
   color: var(--color-pink-soft);            /* 符号颜色 */
 }
 /* 有序（内层） */
 #write ul ol,
 #write ol ol {
+  list-style: none;             /* 移除默认符号 */
   counter-reset: xl-ol-count;   /* 数字计数器 */
 }
 #write ul ol li,
 #write ol ol li {
-  position: relative;             /* 符号定位 */
   counter-increment: xl-ol-count; /* 递增罗马计数器 */
 }
 #write ul ol li::before,
 #write ol ol li::before {
   content: counter(xl-ol-count, lower-roman) ".";   /* 显示计数器数字 */
   position: absolute;                               /* 符号定位 */
-  left: calc(-4 * var(--fontsize-normal));          /* 符号与文本距离 */
-  width: calc(4 * var(--fontsize-normal));          /* 符号区域宽度 */                                         /* 序号宽度设置为两个中文字符 */
-  text-align: right;                                /* 对齐方式 */
+  left: calc(-2 * var(--fontsize-normal));          /* 符号与文本距离 */
   color: var(--color-pink-soft);                    /* 数字颜色 */
 }
 
 /** 引用块文本样式 */
 #write blockquote {
-  display: block;                                   /* 独立区块 */
-  font-size: 1em;                                   /* 字体大小 */
+  font-size: var(--fontsize-small);                 /* 小字号 */
   overflow: visible;                                /* 溢出时完整显示 */
   border-left: 10px solid var(--color-pink-light);  /* 引用块左侧条框 */
   padding: 15px 30px 15px 20px;                     /* 引用块内边距 */
