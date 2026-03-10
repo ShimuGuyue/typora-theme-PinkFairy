@@ -248,14 +248,14 @@ mark {
 /** 引用块文本样式 */
 #write blockquote {
   font-size: var(--fontsize-small);                 /* 小字号 */
-  overflow: visible;                                /* 溢出时完整显示 */
   border-left: 10px solid var(--color-pink-light);  /* 引用块左侧条框 */
   padding: 15px 30px 15px 20px;                     /* 引用块内边距 */
-  margin-bottom: 20px;                              /* 引用块底部外边距 */
-  margin-top: 20px;                                 /* 引用块顶部外边距 */
   background-color: var(--color-pink-bright);       /* 引用块背景 */
-  color: var(--color-pink-hot);                     /* 引用块文本颜色 */
-  border-radius: 8px;                               /* 引用块圆角 */
+  color: #8e8e93;                                 /* 引用块文本颜色 */
+}
+#write blockquote em,
+#write blockquote strong {
+  font-size: var(--fontsize-small);                 /* 小字号 */
 }
 
 /*
