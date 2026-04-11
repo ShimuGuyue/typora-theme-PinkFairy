@@ -191,60 +191,6 @@ mark {
   border: 1px dashed var(--color-pink-soft);    /* 粉色虚线边框 */
 }
 
-/** 列表样式 */
-#write ul,
-#write ol {
-  list-style: none;                               /* 移除默认符号 */
-  padding-left: calc(2 * var(--fontsize-normal)); /* 缩进距离 */
-}
-/* 无序（外层） */
-#write ul li::before {
-  content: "❀";                            /* 符号 */
-  position: absolute;                       /* 符号位置 */
-  left: calc(-2 * var(--fontsize-normal));  /* 符号与文本距离 */
-  color: var(--color-pink-soft);            /* 符号颜色 */
-}
-/* 无序（内层） */
-#write ul ul li::before,
-#write ol ul li::before {
-  content: "➳";                            /* 符号 */
-  position: absolute;                       /* 符号位置 */
-  left: calc(-2 * var(--fontsize-normal));  /* 符号与文本距离 */
-  color: var(--color-pink-soft);            /* 符号颜色 */
-}
-
-/* 有序（外层） */
-#write ol {
-  list-style: none;         /* 移除默认符号 */
-  counter-reset: ol-count;  /* 数字计数器 */
-}
-#write ol li {
-  counter-increment: ol-count;  /* 递增数字计数器 */
-}
-#write ol li::before {
-  content: counter(ol-count) ".";           /* 显示计数器数字 */
-  position: absolute;                       /* 符号定位 */
-  left: calc(-2 * var(--fontsize-normal));  /* 符号与文本距离 */
-  color: var(--color-pink-soft);            /* 符号颜色 */
-}
-/* 有序（内层） */
-#write ul ol,
-#write ol ol {
-  list-style: none;             /* 移除默认符号 */
-  counter-reset: xl-ol-count;   /* 数字计数器 */
-}
-#write ul ol li,
-#write ol ol li {
-  counter-increment: xl-ol-count; /* 递增罗马计数器 */
-}
-#write ul ol li::before,
-#write ol ol li::before {
-  content: counter(xl-ol-count, lower-roman) ".";   /* 显示计数器数字 */
-  position: absolute;                               /* 符号定位 */
-  left: calc(-2 * var(--fontsize-normal));          /* 符号与文本距离 */
-  color: var(--color-pink-soft);                    /* 数字颜色 */
-}
-
 /** 引用块文本样式 */
 #write blockquote {
   font-size: var(--fontsize-small);                 /* 小字号 */
@@ -256,6 +202,59 @@ mark {
 #write blockquote em,
 #write blockquote strong {
   font-size: var(--fontsize-small);                 /* 小字号 */
+}
+
+/*
+  *=============================
+  * 列表样式
+  *=============================
+*/
+#write ul,
+#write ol {
+  list-style: none;                               /* 移除默认标识 */
+  padding-left: calc(2 * var(--fontsize-normal)); /* 缩进距离 */
+}
+#write li {
+  position: relative;
+}
+/** 最外层样式 */
+/* 外层无序 */
+#write > ul > li::before,
+#write > ol > li::before {
+  content: "❀";
+  position: absolute;
+  left: calc(-2 * var(--fontsize-normal));
+  color: var(--color-pink-soft);
+}
+/* 外层有序 */
+#write ol {
+  counter-reset: outer-ol-counter;
+}
+#write > ol > li::before {
+  counter-increment: outer-ol-counter;
+  content: counter(outer-ol-counter) ".";
+}
+/** 内层样式 */
+/* 内层无序 */
+#write ul ul li::before,
+#write ol ul li::before {
+  content: "➳";
+  position: absolute;
+  left: calc(-2 * var(--fontsize-normal));
+  color: var(--color-pink-soft);
+}
+/* 内层有序 */
+#write ul ol,
+#write ol ol {
+  counter-reset: inner-ol-counter;
+}
+#write ul ol > li::before,
+#write ol ol > li::before {
+  counter-increment: inner-ol-counter;
+  content: counter(inner-ol-counter, lower-roman) ".";
+  position: absolute;
+  left: calc(-2 * var(--fontsize-normal));
+  color: var(--color-pink-soft);
 }
 
 /*
